@@ -46,11 +46,11 @@ async def echo_message(message: types.Message):
         await bot.send_message(user_id, 'Пришлите текст - одно слово, другие типы данных не поддерживаются')
     elif not txt.isalpha():
         await bot.send_message(user_id, 'Пришлите одно слово, без цифр и специальных символов')
-    elif len(txt) > 10:
+    elif len(txt) > 15:
         await bot.send_message(user_id, 'Пришлите одно слово длиной не более 10 символов')
     else:
         logging.info(f'Нам написал {user_name}, его id = {user_id}')
-        await bot.send_photo(user_id, picture(txt))
+        await bot.send_message(user_id, picture(txt))
 
 
 if __name__ == '__main__':
