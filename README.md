@@ -1,4 +1,7 @@
 # Bot_PolundraHack
+Запустить сервис можно по ссылке https://t.me/Elbrus5Bot или отсканировав QR-код
+
+<a href="http://qrcoder.ru" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Ft.me%2FElbrus5Bot&6&0" width="198" height="198" border="0" title="QR код"></a>
 ## Задача
 Создать сервис для помощи пользователю в поиске картики по введеному слову.
 ## Решение задачи
