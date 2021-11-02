@@ -50,7 +50,6 @@ async def echo_message(message: types.Message):
     else:
         logging.info(f'Нам написал {user_name}, его id = {user_id}')
         await bot.send_photo(user_id, search_image(txt))
-
-
+        
 if __name__ == '__main__':
     executor.start_polling(dp)
