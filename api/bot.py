@@ -7,9 +7,9 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
-from api.model import search_image
+from api.model_kirill import search_image
 
-from api.utils.static_text import START, INFO
+from api.utils.static import START, INFO
 
 # Логирование
 logging.basicConfig(filename='log.log',
@@ -47,8 +47,6 @@ async def echo_message(message: types.Message):
         await bot.send_message(user_id, 'Пришлите текст - одно слово, другие типы данных не поддерживаются')
     elif not txt.isalpha():
         await bot.send_message(user_id, 'Пришлите одно слово, без цифр и специальных символов')
-    elif len(txt) > 10:
-        await bot.send_message(user_id, 'Пришлите одно слово длиной не более 10 символов')
     else:
         logging.info(f'Нам написал {user_name}, его id = {user_id}')
         await bot.send_photo(user_id, search_image(txt))

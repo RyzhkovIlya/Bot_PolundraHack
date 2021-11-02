@@ -44,7 +44,7 @@ async def echo_message(message: types.Message):
     user_name = message.from_user.full_name
     if message.content_type != 'text':
         await bot.send_message(user_id, 'Пришлите текст - одно слово, другие типы данных не поддерживаются')
-    elif not txt.isalpha():
+    elif not txt.isa():
         await bot.send_message(user_id, 'Пришлите одно слово, без цифр и специальных символов')
     else:
         logging.info(f'Нам написал {user_name}, его id = {user_id}')

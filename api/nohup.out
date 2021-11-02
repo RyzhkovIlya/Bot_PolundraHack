@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "bot.py", line 10, in <module>
+    from api.model import search_image
+ModuleNotFoundError: No module named 'api'
+Traceback (most recent call last):
+  File "bot.py", line 10, in <module>
+    from api.model_kirill import search_image
+ModuleNotFoundError: No module named 'api'
